@@ -7,10 +7,6 @@ from funcion import funcion_blueprint
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
 
-@app.route('/')
-@app.route('/usuariosAdmin/')
-def verUsuarios():
-    return 'ok'
 
 app.register_blueprint(pelicula_blueprint)
 app.register_blueprint(funcion_blueprint)

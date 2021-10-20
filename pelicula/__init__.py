@@ -3,9 +3,27 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from datetime import datetime
 from forms.formPelicula import FormPelicula
 from clases.pelicula import Pelicula
-from database.dbPelicula import sql_select_pelicula, sql_select_peliculas, sql_insert_pelicula, sql_edit_pelicula, sql_delete_pelicula
+from database.dbPelicula import sql_select_pelicula, sql_select_peliculas, sql_insert_pelicula, sql_edit_pelicula, sql_delete_pelicula,sql_connection
+from clases.funcion import Funcion
+from database.dbFuncion import sql_select_funcion
 
 pelicula_blueprint = Blueprint('pelicula_blueprint', __name__, template_folder='templates')
+funciones_blueprint = Blueprint('pelicula_blueprint', __name__, template_folder='templates')
+@pelicula_blueprint.route("/", methods=['GET'])
+def index():
+
+    sql_connection()
+    peliculas = sql_select_peliculas()
+    
+    return render_template('index.html', peliculas=peliculas)
+
+
+@pelicula_blueprint.route("/funciones/<int:idpelicula>",  methods=['GET', 'POST'])
+def funciones(idpelicula):
+    peliculasdetalle=sql_select_pelicula(idpelicula)
+    detallefuncion=sql_select_funcion(idpelicula)
+    return render_template("funciones.html", peliculasdetalle=peliculasdetalle, detallefuncion=detallefuncion)
+
 
 @pelicula_blueprint.route('/peliculas/')
 def verPelicula():
@@ -79,3 +97,4 @@ def editarPelicula(idPelicula):
 def eliminarPelicula(idPelicula):
     sql_delete_pelicula(idPelicula)
     return redirect(url_for('pelicula_blueprint.verPelicula'))
+

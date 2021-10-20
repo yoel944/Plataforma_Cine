@@ -1,0 +1,178 @@
+{% extends "layaout.html" %}
+
+{% block body %}
+
+    
+
+    <div class="container text-center text-light  ">
+        <h1 class="display-5 fw-bold">{{ peliculasdetalle[1] }}</h1>
+    </div>
+    
+    <div class="container  ">
+        <div class="row ">
+            <div class="col-3 text-center  ">
+                <img src="{{ peliculasdetalle[11] }}"  alt="width="250" height="400"></div>
+
+            <div class="col-8 x-10 text-center ">
+                <iframe width="700" height="340" src="{{  peliculasdetalle[12]  }}"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    <div class="container-fluid mt-4">
+        <div class="row   ">
+            <div class="col-1 "></div>
+            <div class="col-3 ms-2 fw-bold pt-4  px-4 rounded-3 ">
+                <p class="bg-light p-4 mb-0 ms-4  rounded-3">
+                    Director </br> {{  peliculasdetalle[7]  }}
+                </p>
+
+                <p class="bg-light ps-4 pt-4 pb-0 mb-0 ms-4 pe-4">
+                    Reparto </br> {{ peliculasdetalle[8] }}
+                </p>
+
+                <p class="bg-light ps-4 pt-4 pb-0 mb-0 ms-4 ">
+                    Duracion </br> {{ peliculasdetalle[5] }}
+                </p>
+                <p class="bg-light ps-4 pt-4 pb-0 mb-0 ms-4 ">
+                    Pais de Origen </br> {{ peliculasdetalle[9] }}
+                </p>
+                <p class="bg-light ps-4 pt-4 pb-0 mb-0 ms-4 ">
+                    Año de Estreno </br> {{ peliculasdetalle[6] }}
+                </p>
+                <p class="bg-light ps-4 pt-4 pb-0 mb-0 ms-4 ">
+                    Genero </br> {{ peliculasdetalle[3] }}
+                </p>
+                <p class="bg-light ps-4 pt-4 pb-4 mb-0 ms-4 rounded-3">
+                    Clasificaicon </br>  {{ peliculasdetalle[4] }}
+                </p>
+                </div>
+                
+  
+            
+
+            <div class="col-6 m-3 me-0 pe-0 fw-bold">
+                <p class="bg-light p-4 rounded-3 m-4">
+                    {{ peliculasdetalle[10] }}
+
+                    <div class="container">
+                        <div class="row ">
+                        <img src="/images/Vector.png" alt=""> <span class="fw-bold text-light h5 m-4">Tiquetes
+                            Disponible {{detallefuncion[10]}}/100</span>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="container  d-inline-block">
+
+                            <div class="col-1   d-inline-block"> </div>
+                            <div class="col-3   d-inline-block text-center me-2"><span
+                                    class="h5 fw-bold text-light ">  {{detallefuncion[1]}} 
+
+                                </span></div>
+                            <div class="col-3   d-inline-block text-center m-2"><span
+                                    class="h5 fw-bold text-light">  {{detallefuncion[1]}} 
+
+                                </span></div>
+                            <div class="col-3   d-inline-block text-center ms-2"><span
+                                    class="h5 fw-bold text-light">  {{detallefuncion[1]}} 
+
+                                </span></div>
+                            </div>
+                        </div>
+                    </div>
+                       
+                    <div class="container  d-inline-block">
+
+                        <div class="col-1   d-inline-block"><span class="h5 fw-bold text-light"> {{ detallefuncion[2] }}
+
+                            </span></div>
+                        <div class="col-3   d-inline-block me-3 text-center"> <button type="button"
+                                class="btn btn-danger fw-bold">Comprar tiquetes </br> {{ detallefuncion[8] }}</button> </div>
+                        <div class="col-3   d-inline-block m-3 text-center"><button type="button"
+                                class="btn btn-danger fw-bold">Comprar tiquetes </br> {{ detallefuncion[8] }}</button>
+                        </div>
+                        <div class="col-3   d-inline-block ms-3 text-center"><button type="button"
+                                class="btn btn-danger fw-bold">Comprar tiquetes </br> {{ detallefuncion[9] }}</button></div>
+
+                    </div>
+                    <div class="container  d-inline-block">
+
+                        <div class="col-1   d-inline-block"><span class="h5 fw-bold text-light"> {{ detallefuncion[2] }}
+
+                            </span></div>
+                        <div class="col-3   d-inline-block me-3 text-center"><button type="button"
+                                class="btn btn-danger fw-bold">Comprar tiquetes </br> {{ detallefuncion[9] }}</button> </div>
+                        <div class="col-3   d-inline-block m-3 text-center"><button type="button"
+                                class="btn btn-danger fw-bold">Comprar tiquetes </br> {{ detallefuncion[9] }}</button></div>
+                        <div class="col-3   d-inline-block ms-3 text-center"><button type="button"
+                                class="btn btn-danger fw-bold">Comprar tiquetes </br> {{ detallefuncion[8] }}</button></div>
+
+                    </div>
+                </div>
+        </div>
+
+        </div> 
+               
+    </div>           
+    
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2 fw-bold m-2">
+                <div class="bg-danger text-center h5 rounded-3 p-1">
+                    <p class="text-light rounded-3"> Puntuar Peliculas</p>
+                    <p> 1 | 2 | 3 | 4 | 5 </p>
+                </div>
+            </div>
+            <div class="col-2  text-white ">
+                <i class="bi bi-person-circle display-6 p-4 pt-4 d-flex justify-content-end"></i>
+
+            </div>
+            <div class="col-5  text-light fw-bold">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"> Comentarios</label>
+                    <textarea class="form-control fw-bold" id="exampleFormControlTextarea1" placeholder="escribe un comentario"  rows="3"></textarea>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="container w-75 ">
+            <div class="row">
+                <div class="d-grid gap-2 d-flex justify-content-end">
+            
+            <button type="button" class="btn btn-light fw-bold m-4">Comentar</button>
+        </div>
+            </div>
+        </div>
+        
+    
+        <div class="container m-4">
+            <div class="row">
+                <div class="col-5 ">
+                    <i class="bi bi-person-circle display-6 d-flex justify-content-end text-light"></i>
+                </div>
+                <div class="col-3 ">
+                    <p class="bg-light fw-bold h6 rounded-3 p-2">
+                        !Exelente pelicula!
+                    </p>
+                    <div class="row ">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            
+                            <button type="button" class="btn btn-light fw-bold rounded-3">Editar</button>
+                            <button type="button" class="btn btn-light fw-bold rounded-3">Eliminar</button>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
